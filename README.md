@@ -1,7 +1,7 @@
 # Curabitur
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f43fe44e2b438b92a23a0fe560e49b)](https://www.codacy.com/app/BrianLusina/curabitur?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/curabitur&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/BrianLusina/cibuscart.svg?branch=master)](https://travis-ci.org/BrianLusina/cibuscart)
+[![Build Status](https://travis-ci.org/BrianLusina/curabitur.svg?branch=master)](https://travis-ci.org/BrianLusina/curabitur)
 [![codecov](https://codecov.io/gh/BrianLusina/curabitur/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/curabitur)
 
 Translates to Latin for "Chat". This is a simple chat application with [Redux](https://redux.js.org/), [React](https://reactjs.org/) and [websockets](https://en.wikipedia.org/wiki/WebSocket). This is a simple demonstration onf the posibilities of using React for creating chat applications that communicate via websockets.

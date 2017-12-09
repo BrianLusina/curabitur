@@ -33,15 +33,15 @@ after_success:
   - git config --global user.name $GITHUB_USER_NAME
   - npm run deploy
 
-#before_deploy:
-#  - npm run build
+before_deploy:
+ - npm run build
 
-#deploy:
-#  provider: page
-#  skip_cleanup: true
-#  github_token: $GITHUB_TOKEN
-#  local_dir: build/
-#  target_branch: gh-pages
+deploy:
+ provider: page
+ skip_cleanup: true
+ github_token: $GITHUB_TOKEN
+ local_dir: build/
+ target_branch: gh-pages
 
-#  on:
-#    branch: master
+ on:
+   branch: master
