@@ -2,6 +2,7 @@
   "name": "curabitur",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://brianlusina.github.io/curabitur/",
   "dependencies": {
     "chance": "^1.0.12",
     "react": "^16.2.0",
@@ -15,11 +16,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test:cover": "npm run test -- --coverage",
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "devDependencies": {
     "codecov": "^3.0.0",
     "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0"
+    "enzyme-adapter-react-16": "^1.1.0",
+    "gh-pages": "^1.1.0"
   }
 }

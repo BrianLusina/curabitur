@@ -1,8 +1,6 @@
 language: node_js
 sudo: false
 node_js:
-    - "5.0"
-    - "5.11"
     - "6"
     - "7"
     - "8"
@@ -11,12 +9,8 @@ cache:
   directories:
     - node_modules
 
-notifications:
-  email: false
-
 branches:
   only:
-    - develop
     - master
 
 before_script:
@@ -24,19 +18,9 @@ before_script:
 
 script:
   - npm run test
-  - npm run test:coverage
+  - npm run test:cover
   - codecov
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-
-before_deploy:
-  - npm run build
-  - npm i pushstate-server -g
-
-deploy:
-  provider: surge
-  project: ./build/
-  domain: mediastore.surge.sh
-  on: master
-
+  - npm run deploy
