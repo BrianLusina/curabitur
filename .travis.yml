@@ -31,17 +31,18 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
   - git config --global user.email $GITHUB_USER_EMAIL
   - git config --global user.name $GITHUB_USER_NAME
-  - npm run deploy
+  # - npm run deploy
 
 before_deploy:
  - npm run build
 
 deploy:
- provider: page
+ provider: pages
  skip_cleanup: true
  github_token: $GITHUB_TOKEN
  local_dir: build/
  target_branch: gh-pages
-
+ email: $GITHUB_USER_EMAIL
+ name: $GITHUB_USER_NAME
  on:
    branch: master
