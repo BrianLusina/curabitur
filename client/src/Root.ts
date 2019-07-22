@@ -1,15 +1,13 @@
 /* eslint-disable */
-const { NODE_ENV } = process.env;
+// @ts-ignore
+const env = process.env.NODE_ENV;
 
 let root;
 
-if (NODE_ENV === "production") {
+if (env === "production") {
     root = require("./Root.prod");
-    module.exports = root;
-} else if (NODE_ENV === "staging") {
-    root = require("./Root.staging");
-    module.exports = root;
 } else {
     root = require("./Root.staging");
-    module.exports = root;
 }
+
+module.exports = root;
