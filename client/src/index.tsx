@@ -5,6 +5,7 @@ import * as serviceWorker from "./serviceWorker";
 import configureStore from "./store/configureStore";
 import Root from "./Root";
 
+// @ts-ignore
 const { store } = configureStore();
 const domTarget = document.getElementById("root");
 
