@@ -49,5 +49,5 @@ module.exports = {
         // "\\.(css)$": "<rootDir>/node_modules/",
         // "\\.(png|jpg|svg)$": "<rootDir>/src/assets/images",
     },
-    setupTestFrameworkScriptFile: "<rootDir>/config/setupTests.js"
+    setupFilesAfterEnv: ["<rootDir>/config/setupTests.js"]
 };
