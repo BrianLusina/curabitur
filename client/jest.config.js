@@ -22,7 +22,8 @@ module.exports = {
     ],
     setupFiles: [
         "<rootDir>/config/polyfills.js",
-        "<rootDir>/config/setupTests.js"
+        "<rootDir>/config/setupTests.js",
+        "<rootDir>/config/browserMock.js"
     ],
     testMatch: [
         "<rootDir>/__tests__/**/*.{js,ts,tsx,jsx,mjs}",
