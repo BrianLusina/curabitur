@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "Styles/*": ["styles/*"],
+      "Translations/*": ["i18n/*"],
+      "Storage/*": ["services/storage/*"],
+      "Components/*": ["components/*"],
+      "Store/*": ["store/*"]        
+    },    
     "target": "es5",
     "lib": [
       "dom",

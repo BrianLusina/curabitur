@@ -49,6 +49,11 @@ module.exports = {
         // "\\.(css|less|scss)$": "<rootDir>/src/assets/styles",
         // "\\.(css)$": "<rootDir>/node_modules/",
         // "\\.(png|jpg|svg)$": "<rootDir>/src/assets/images",
+        "^Styles/(.*)$": "<rootDir>/src/styles/$1",
+        "^Store/(.*)$": "<rootDir>/src/store/$1",
+        "^Components/(.*)$": "<rootDir>/src/components/$1",
+        "^Storage/(.*)$": "<rootDir>/src/services/storage/$1",
+        "^Translations/(.*)$": "<rootDir>/src/i18n/$1"
     },
     setupFilesAfterEnv: ["<rootDir>/config/setupTests.js"]
 };
