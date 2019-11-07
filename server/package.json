@@ -1,0 +1,17 @@
+{
+  "name": "chat-server",
+  "version": "1.0.0",
+  "description": "server for chat sockets",
+  "main": "index.js",
+  "repository": "https://github.com/BrianLusina/chat-sockets.git",
+  "author": "Brian Lusina",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "test": "exit 0"
+  }
+}
