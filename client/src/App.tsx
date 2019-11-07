@@ -1,10 +1,13 @@
 import React from "react";
-import "./App.css";
 import AppRouter from "./router/AppRouter";
+import TranslationsProvider from "./components/translations/TranslationsProvider";
+import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <AppRouter />
+    <TranslationsProvider>
+      <AppRouter />
+    </TranslationsProvider>
   );
 };
 

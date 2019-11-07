@@ -1,9 +1,14 @@
 language: node_js
-sudo: false
+sudo: required
+dist: trusty
 node_js:
-    - "6"
-    - "7"
-    - "8"
+    - "10"
+    - "11"
+    - "12"
+
+services:
+  - docker
+
 matrix:
   fast_finish: true
   include:
@@ -13,25 +18,21 @@ matrix:
 
 cache:
   directories:
-    - node_modules
+    - client/node_modules
+    - server/node_modules
 
-branches:
-  only:
-    - master
-
-before_script:
-    - npm install 
 
 script:
-  - npm run test
+  - cd client; npm install
   - npm run test:cover
-  - codecov
+  - cd ..
+  - cd server; npm install
+  - npm run test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - git config --global user.email $GITHUB_USER_EMAIL
   - git config --global user.name $GITHUB_USER_NAME
-  # - npm run deploy
 
 before_deploy:
  - npm run build
