@@ -23,10 +23,10 @@ cache:
 
 
 script:
-  - cd client & npm install
+  - cd client; npm install
   - npm run test:cover
   - cd ..
-  - cd server & npm install
+  - cd server; npm install
   - npm run test
 
 after_success:
