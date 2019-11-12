@@ -41,6 +41,7 @@ type State = {
 };
 
 const Provider = translationsContext.Provider;
+export const TranslationContextConsumer = translationsContext.Consumer;
 
 export default class TranslationsProvider extends Component<Props, State> {
     state: State = {
