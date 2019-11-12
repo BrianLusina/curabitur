@@ -45,7 +45,7 @@ export const TranslationContextConsumer = translationsContext.Consumer;
 
 export default class TranslationsProvider extends Component<Props, State> {
     state: State = {
-        translations: readRecord("lang") != "de" ? enTranslations : deTranslations
+        translations: readRecord("lang") !== "de" ? enTranslations : deTranslations
     };
 
     /**
