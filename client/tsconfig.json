@@ -5,6 +5,8 @@
       "Styles/*": ["styles/*"],
       "Translations/*": ["i18n/*"],
       "Storage/*": ["services/storage/*"],
+      "Services/*": ["services/*"],
+      "@socket/*": ["services/socket/*"],
       "Components/*": ["components/*"],
       "Store/*": ["store/*"]        
     },    

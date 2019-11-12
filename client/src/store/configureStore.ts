@@ -20,15 +20,8 @@ const {NODE_ENV} = process.env;
 // @ts-ignore
 export default function configureStore(initialState) {
     if (NODE_ENV === "production") {
-        const store = createStore(rootReducer, initialState, compose(applyMiddleware(...prodMiddleware)));
-        return {
-            store
-        };
+        return createStore(rootReducer, initialState, compose(applyMiddleware(...prodMiddleware)));
     } else {
-        const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(...devMiddleware)));
-
-        return {
-            store
-        };
+        return createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(...devMiddleware)));
     }
 }
