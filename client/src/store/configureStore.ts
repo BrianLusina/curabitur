@@ -9,7 +9,7 @@ import {
     compose,
     applyMiddleware
 } from "redux";
-import { rootReducer } from "../reducers/rootReducer";
+import { rootReducer, AppState } from "./rootReducer";
 import {
     prodMiddleware, devMiddleware
 } from "./middleware";
@@ -17,8 +17,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 const {NODE_ENV} = process.env;
 
-// @ts-ignore
-export default function configureStore(initialState) {
+
+export default function configureStore(initialState: AppState) {
     if (NODE_ENV === "production") {
         return createStore(rootReducer, initialState, compose(applyMiddleware(...prodMiddleware)));
     } else {

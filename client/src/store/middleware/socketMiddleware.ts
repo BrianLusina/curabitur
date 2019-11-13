@@ -16,8 +16,8 @@ const socketMiddleware = (store: any) => {
      * Handler function that dispatches connection Changed action to the store
      * @param {Boolean} isConnected Whether we are connected to web socket
      */
-    const onConnectionChanged = (isConnected: boolean) => {
-        store.dispatch(connectionChangedActionCreator(isConnected));
+    const onConnectionChanged = (isConnected: boolean, isError: boolean) => {
+        store.dispatch(connectionChangedActionCreator(isConnected, isError));
     };
 
     /**

@@ -4,8 +4,9 @@ import { CONNECTION_CHANGED, CONNECT_SOCKET } from "./actionTypes";
 describe("Socket Action Creator", () => {
     it("should create an action to handle change in connection", () => {
         const isConnected = true;
+        const isError = false;
 
-        const actualAction = connectionChangedActionCreator(isConnected);
+        const actualAction = connectionChangedActionCreator(isConnected, isError);
 
         const expectedAction = {
             type: CONNECTION_CHANGED,

@@ -4,11 +4,11 @@ import { CONNECT_EVENT, MESSAGE_EVENT } from "./constants";
 export default class SocketService {
     public user: string;
     public port: string;
-    private onChange: (isConnected: boolean) => void;
+    private onChange: (isConnected: boolean, isError: boolean) => void;
     private onMessage: (message: { from: string, content: string, time: string }) => void;
     private socket: any;
 
-    constructor(onChange: (isConnected: boolean) => void, onMessage: (message: { from: string, content: string, time: string }) => void) {
+    constructor(onChange: (isConnected: boolean, isError: boolean) => void, onMessage: (message: { from: string, content: string, time: string }) => void) {
         this.onChange = onChange;
         this.onMessage = onMessage;
         this.socket = "";
@@ -32,7 +32,7 @@ export default class SocketService {
 
     public onConnected = () => {
         this.socket.on(MESSAGE_EVENT, this.onMessage);
-        this.onChange(true);
+        this.onChange(true, false);
     };
 
     public sendMessage = (message: { from: string, content: string, time: string }) => {
