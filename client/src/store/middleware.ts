@@ -4,6 +4,7 @@ import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
 import {
     createLogger
 } from "redux-logger";
+import socketMiddleware from "./middleware/socketMiddleware";
 
 // TODO: set logger options:
 // refer to https://github.com/evgenyrodionov/redux-logger
@@ -12,6 +13,7 @@ const logger = createLogger({
 });
 
 export const prodMiddleware = [
+    socketMiddleware,
     thunk,
 ];
 

@@ -6,7 +6,7 @@ import configureStore from "./store/configureStore";
 import Root from "./Root";
 
 // @ts-ignore
-const { store } = configureStore();
+const store = configureStore();
 const domTarget = document.getElementById("root");
 
 render(<Root store={store} />, domTarget);
