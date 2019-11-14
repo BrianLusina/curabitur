@@ -1,7 +1,7 @@
 import React from "react";
 import AppRouter from "./router/AppRouter";
-import TranslationsProvider from "Components/translations/TranslationsProvider";
-import ThemeProvider from "Components/theme/ThemeProvider";
+import TranslationsProvider from "Providers/translations/TranslationsProvider";
+import ThemeProvider from "Providers/theme/ThemeProvider";
 import "./App.css";
 
 const App: React.FC = () => {
