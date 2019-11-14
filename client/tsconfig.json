@@ -8,6 +8,7 @@
       "Services/*": ["services/*"],
       "@socket/*": ["services/socket/*"],
       "Components/*": ["components/*"],
+      "Providers/*": ["providers/*"],
       "Store/*": ["store/*"]        
     },    
     "target": "es5",

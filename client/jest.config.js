@@ -53,7 +53,8 @@ module.exports = {
         "^Store/(.*)$": "<rootDir>/src/store/$1",
         "^Components/(.*)$": "<rootDir>/src/components/$1",
         "^Storage/(.*)$": "<rootDir>/src/services/storage/$1",
-        "^Translations/(.*)$": "<rootDir>/src/i18n/$1"
+        "^Translations/(.*)$": "<rootDir>/src/i18n/$1",
+        "^Providers/(.*)$": "<rootDir>/src/providers/$1"
     },
     setupFilesAfterEnv: ["<rootDir>/config/setupTests.js"]
 };

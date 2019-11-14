@@ -1,26 +1,15 @@
-import React, { createContext, Component, ReactNode } from "react";
+import React, { Component, ReactNode } from "react";
 import { readRecord } from "Storage/localStorageService";
 import { lightTheme, darkTheme } from "./themes";
-
-interface ThemeContext {
-    primaryLightColor: string;
-    secondaryLightColor: string;
-    primaryDarkColor: string;
-    secondaryDarkColor: string;
-    messageBackgroundColor: string;
-}
-
-const themeContext = createContext<ThemeContext | any>(null);
-
-const ContextProvider = themeContext.Provider;
-export const ThemeContextConsumer = themeContext.Consumer;
+import { ThemeContextType } from "./types";
+import ThemeContext from "./context";
 
 type Props = {
     children: ReactNode
 };
 
 type State = {
-    colorTheme: ThemeContext
+    colorTheme: ThemeContextType
 };
 
 export default class ThemeProvider extends Component<Props, State> {
@@ -39,12 +28,12 @@ export default class ThemeProvider extends Component<Props, State> {
 
     render() {
         return (
-            <ContextProvider value={{
+            <ThemeContext.Provider value={{
                 theme: this.state.colorTheme,
                 changeTheme: this.handleThemeChange
             }}>
                 { this.props.children }
-            </ContextProvider>
+            </ThemeContext.Provider>
         );
     }
 }

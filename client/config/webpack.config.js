@@ -279,6 +279,7 @@ module.exports = function(webpackEnv) {
         Components: path.resolve("src/components/"),
         Store: path.resolve("src/store/"),
         Services: path.resolve("src/services/"),
+        Providers: path.resolve("src/providers/"),
         "@socket": path.resolve("services/socket/")
       },
       plugins: [
