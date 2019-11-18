@@ -9,6 +9,7 @@ import { Dispatch } from "redux";
 import { connectSocketActionCreator } from "Store/socket/actionCreators";
 import { getAllMessagesSelector, getUsernameSelector } from "Store/message/selectors";
 import { Message } from "Store/message/types";
+import { isPageActive } from "DomUtils";
 
 type Props = {
     translations: TranslationContextType,
@@ -21,7 +22,7 @@ type Props = {
 type State = {
     shouldBlink: boolean;
     unreadMessages: number;
-    receivedUnreadMessages: []
+    receivedUnreadMessages: Message[]
 };
 
 export class Navigation extends Component<Props, State> {
@@ -59,6 +60,21 @@ export class Navigation extends Component<Props, State> {
 
     componentDidMount() {
         this.props.connectToSockets();
+    }
+
+    componentDidUpdate(prevProps: Props, prevState: State) {
+        const { messages } = this.props;
+
+        // && isPageActive("settings")
+        if (prevProps.messages.length !== messages.length) {
+            const lastMessage: Message = messages[messages.length - 1];
+            this.setState({
+                receivedUnreadMessages: [...prevState.receivedUnreadMessages, lastMessage]
+            }, () => {
+                this.handleBlinking();
+                this.updateUnreadMessagesCount();
+            });
+        }
     }
 
     render() {

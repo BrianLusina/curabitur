@@ -9,7 +9,9 @@
       "@socket/*": ["services/socket/*"],
       "Components/*": ["components/*"],
       "Providers/*": ["providers/*"],
-      "Store/*": ["store/*"]        
+      "Store/*": ["store/*"],
+      "TimeUtils": ["utils/timeUtils.ts"],
+      "DomUtils": ["utils/domUtils.ts"]
     },    
     "target": "es5",
     "lib": [

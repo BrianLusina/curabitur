@@ -280,7 +280,9 @@ module.exports = function(webpackEnv) {
         Store: path.resolve("src/store/"),
         Services: path.resolve("src/services/"),
         Providers: path.resolve("src/providers/"),
-        "@socket": path.resolve("services/socket/")
+        "@socket": path.resolve("src/services/socket/"),
+        TimeUtils: path.resolve("/src/utils/timeUtils.ts"),
+        DomUtils: path.resolve("src/utils/domUtils.ts")
       },
       plugins: [
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding

@@ -13,11 +13,16 @@ describe("Navigation", () => {
         translations: {},
         connectToSockets: jest.fn()
     };
-    let wrapper;
+    let wrapper: any;
 
     beforeEach(() => {
         wrapper = shallow(<Navigation {...props} />);
-    });
+
+        jest.mock("DomUtils", () => ({
+            __esModule: true,
+            isPageActive: jest.fn().mockReturnValue(true)
+        }));
+   });
 
     it("should render without crashing", () => {
         render(<Navigation {...props}/>, document.createElement("div"));
@@ -26,6 +31,23 @@ describe("Navigation", () => {
     it("should call connectToSockets on componentDidMount", () => {
         sinon.spy(Navigation.prototype, "componentDidMount");
         expect(props.connectToSockets).toHaveBeenCalled();
+    });
+
+    it("should call connectToSockets on componentDidUpdate", () => {
+        wrapper.setProps({
+            messages: [
+                {
+                    from: "Jane",
+                    content: "Save the Planet",
+                    type: "received",
+                    time: "21:00"
+                }
+            ]
+        });
+
+        // sinon.spy(Navigation.prototype, "componentDidUpdate");
+
+        expect(wrapper.state().receivedUnreadMessages.length).toEqual(1);
     });
 
     it("should set startBlinking to true when startBlinking method is called", () => {
