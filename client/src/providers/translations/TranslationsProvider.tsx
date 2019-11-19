@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from "react";
-import * as deTranslations from "Translations/de.json";
-import * as enTranslations from "Translations/en.json";
+import deTranslations from "Translations/de.json";
+import enTranslations from "Translations/en.json";
 import { readRecord } from "Storage/localStorageService";
 import TranslationContext from "./context";
 import { TranslationContextType } from "./types";

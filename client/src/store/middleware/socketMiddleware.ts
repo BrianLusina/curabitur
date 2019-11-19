@@ -31,7 +31,7 @@ const socketMiddleware = (store: any) => {
     const socketService = new SocketService(onConnectionChanged, onIncomingMessage);
 
     return (next: any) => (action: any) => {
-        const messageState = store.getState().messages;
+        const messageState = store.getState().message;
         const socketState = store.getState().socket;
 
         switch (action.type) {

@@ -14,6 +14,7 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "socket.io-client": "^2.3.0",
+    "styled-components": "^4.4.1",
     "typescript": "3.5.3"
   },
   "devDependencies": {
@@ -32,6 +33,7 @@
     "@types/redux-immutable-state-invariant": "^2.1.1",
     "@types/redux-logger": "^3.0.7",
     "@types/socket.io-client": "^1.4.32",
+    "@types/styled-components": "^4.4.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
     "babel-eslint": "10.0.1",

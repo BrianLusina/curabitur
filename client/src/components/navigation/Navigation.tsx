@@ -5,17 +5,23 @@ import withTheme from "Providers/theme/withTheme";
 import { ThemeContextType } from "Providers/theme/types";
 import { TranslationContextType } from "Providers/translations/types";
 import { AppState } from "Store/rootReducer";
-import { Dispatch } from "redux";
+import { Dispatch, bindActionCreators } from "redux";
+import { NavLink } from "react-router-dom";
 import { connectSocketActionCreator } from "Store/socket/actionCreators";
+import * as actions from "Store/socket/actionCreators";
 import { getAllMessagesSelector, getUsernameSelector } from "Store/message/selectors";
 import { Message } from "Store/message/types";
-import { isPageActive } from "DomUtils";
+import StyledNavigation from "./StyledNavigation";
+// import { isPageActive } from "DomUtils";
 
 type Props = {
     translations: TranslationContextType,
     theme: ThemeContextType,
     messages: Message[],
     username: string,
+    actions: {
+        connectSocketActionCreator: () => void
+    },
     connectToSockets: () => void
 };
 
@@ -59,7 +65,8 @@ export class Navigation extends Component<Props, State> {
     };
 
     componentDidMount() {
-        this.props.connectToSockets();
+        this.props.actions.connectSocketActionCreator();
+        // this.props.connectToSockets();
     }
 
     componentDidUpdate(prevProps: Props, prevState: State) {
@@ -78,9 +85,23 @@ export class Navigation extends Component<Props, State> {
     }
 
     render() {
-        return (
-            <div>
-            </div>
+        const { translations } = this.props;
+        return translations && (
+            <StyledNavigation>
+                <NavLink
+                    exact={true} activeClassName="active"
+                    onClick={this.clearNotifications}
+                    to={"/chat"}
+                >
+                    <span>{ translations.nav.chatTabLabel }</span>
+                </NavLink>
+                <NavLink
+                    exact={true} activeClassName="active"
+                    to={"/settings"}
+                >
+                    <span>{ translations.nav.settingsTabLabel }</span>
+                </NavLink>
+            </StyledNavigation>
         );
     }
 }
@@ -102,7 +123,8 @@ const mapStateToProps = (state: AppState) => ({
  * @returns {Object} object with keys as dispatch actions
  */
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-    connecToSockets: () => dispatch(connectSocketActionCreator())
+    connecToSockets: () => dispatch(connectSocketActionCreator()),
+    actions: bindActionCreators(actions, dispatch)
 });
 
 // @ts-ignore
