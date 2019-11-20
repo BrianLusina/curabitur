@@ -62,7 +62,8 @@ module.exports = {
     "^Translations/(.*)$": "<rootDir>/src/i18n/$1",
     "^Providers/(.*)$": "<rootDir>/src/providers/$1",
     "^TimeUtils": "<rootDir>/src/utils/timeUtils.ts",
-    "^DomUtils": "<rootDir>/src/utils/domUtils.ts"
+    "^DomUtils": "<rootDir>/src/utils/domUtils.ts",
+    "^Pages/(.*)$": "<rootDir>/src/pages/$1"
   },
   setupFilesAfterEnv: ["<rootDir>/config/setupTests.js"]
 };
