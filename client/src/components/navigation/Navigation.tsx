@@ -12,6 +12,9 @@ import * as actions from "Store/socket/actionCreators";
 import { getAllMessagesSelector, getUsernameSelector } from "Store/message/selectors";
 import { Message } from "Store/message/types";
 import StyledNavigation from "./StyledNavigation";
+import UnreadMessagesCounter from "Components/messages/unread/UnreadMessagesCounter";
+import { faCog, faComment } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { isPageActive } from "DomUtils";
 
 type Props = {
@@ -86,19 +89,24 @@ export class Navigation extends Component<Props, State> {
 
     render() {
         const { translations } = this.props;
+        const { unreadMessages, shouldBlink } = this.state;
         return translations && (
             <StyledNavigation>
                 <NavLink
                     exact={true} activeClassName="active"
+                    className={shouldBlink ? "blinking" : "no-blinking"}
                     onClick={this.clearNotifications}
                     to={"/chat"}
                 >
+                    <FontAwesomeIcon icon={faComment} color="white" size="lg"/>
+                    <UnreadMessagesCounter count={unreadMessages} />
                     <span>{ translations.nav.chatTabLabel }</span>
                 </NavLink>
                 <NavLink
                     exact={true} activeClassName="active"
                     to={"/settings"}
                 >
+                    <FontAwesomeIcon icon={faCog} color="white" size="lg"/>
                     <span>{ translations.nav.settingsTabLabel }</span>
                 </NavLink>
             </StyledNavigation>
@@ -115,7 +123,6 @@ const mapStateToProps = (state: AppState) => ({
     messages: getAllMessagesSelector(state),
     username: getUsernameSelector(state)
 });
-
 
 /**
  * Connect dispatch actions to component to allow updating of state
