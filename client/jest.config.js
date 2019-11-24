@@ -26,7 +26,12 @@ module.exports = {
     "<rootDir>/src/*/endpoints.+\\.js$",
     "<rootDir>/src/api/constants.ts",
     "<rootDir>/src/api/endpoints.js",
-    "<rootDir>/src/actionTypes/"
+    "<rootDir>/src/actionTypes/",
+    "<rootDir>/src/components/messages/StyledMessage.tsx",
+    "<rootDir>/src/components/nickname/StyledNickname.tsx",
+    "<rootDir>/src/components/timestamp/StyledTimestamp.tsx",
+    "<rootDir>/src/pages/StyledPage.tsx",
+    "<rootDir>/src/components/chat/StyledChatArea.tsx"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",
