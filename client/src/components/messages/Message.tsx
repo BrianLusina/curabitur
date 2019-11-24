@@ -1,6 +1,9 @@
 import React from "react";
+// @ts-ignore
 import Emojify from "react-emojione";
+// @ts-ignore
 import MicrolinkCard from "@microlink/react";
+// @ts-ignore
 import Linkify from "linkifyjs/react";
 import getUrls from "get-urls";
 import { Message as MessageType } from "Store/message/types";
@@ -40,7 +43,7 @@ const Message = (props: Props) => {
                     message.type === "received"
                         && <Nickname  value={message.from}/>
                 }
-                <Timestamp value={message.time} floatToRight={message.type == "sent"} />
+                <Timestamp value={message.time} floatToRight={message.type === "sent"} />
             </div>
             <StyledMessage type={message.type || "sent"}>
                 <Linkify>

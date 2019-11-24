@@ -30,7 +30,8 @@ module.exports = {
     "<rootDir>/src/components/messages/StyledMessage.tsx",
     "<rootDir>/src/components/nickname/StyledNickname.tsx",
     "<rootDir>/src/components/timestamp/StyledTimestamp.tsx",
-    "<rootDir>/src/pages/StyledPage.tsx"
+    "<rootDir>/src/pages/StyledPage.tsx",
+    "<rootDir>/src/components/chat/StyledChatArea.tsx"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",
