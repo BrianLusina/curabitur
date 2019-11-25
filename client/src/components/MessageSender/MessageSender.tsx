@@ -139,6 +139,12 @@ export class MessageSender extends Component<Props, State> {
 
     componentDidMount() {
         document.addEventListener("keydown", this.handleKeyPress);
+        document.addEventListener("keyup", this.handleKeyUp);
+    }
+
+    componentWillUnmount(): void {
+        document.removeEventListener("keydown", this.handleKeyPress);
+        document.removeEventListener("keyup", this.handleKeyUp);
     }
 }
 
