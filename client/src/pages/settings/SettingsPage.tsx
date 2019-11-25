@@ -4,6 +4,7 @@ import withTranslations from "Providers/translations/withTranslations";
 import withTheme from "Providers/theme/withTheme";
 import { ThemeContextType } from "Providers/theme/types";
 import { TranslationContextType } from "Providers/translations/types";
+import UserProfile from "Templates/UserProfile";
 
 type Props = {
     changeLanguage: () => void,
@@ -13,9 +14,10 @@ type Props = {
 };
 
 const SettingsPage = (props: Props) => {
+    const { translations } = props;
     return (
         <StyledPage>
-            <div />
+            <UserProfile translations={translations} />
         </StyledPage>
     );
 };
