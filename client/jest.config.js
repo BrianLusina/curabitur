@@ -34,7 +34,9 @@ module.exports = {
     "<rootDir>/src/components/chat/StyledChatArea.tsx",
     "<rootDir>/src/components/MessageSender/StyledMessagSender.tsx",
     "<rootDir>/src/components/MessageSender/index.tsx",
-    "<rootDir>/src/components/MessageSender/constants.ts"
+    "<rootDir>/src/components/MessageSender/constants.ts",
+    "<rootDir>/src/templates/UserProfile/StyledUserProfile.tsx",
+    "<rootDir>/src/templates/UserProfile/index.tsx"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",
@@ -71,7 +73,8 @@ module.exports = {
     "^Providers/(.*)$": "<rootDir>/src/providers/$1",
     "^TimeUtils": "<rootDir>/src/utils/timeUtils.ts",
     "^DomUtils": "<rootDir>/src/utils/domUtils.ts",
-    "^Pages/(.*)$": "<rootDir>/src/pages/$1"
+    "^Pages/(.*)$": "<rootDir>/src/pages/$1",
+    "^Templates/(.*)$": "<rootDir>/src/templates/$1"
   },
   setupFilesAfterEnv: ["<rootDir>/config/setupTests.js"]
 };
