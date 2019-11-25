@@ -36,7 +36,9 @@ module.exports = {
     "<rootDir>/src/components/MessageSender/index.tsx",
     "<rootDir>/src/components/MessageSender/constants.ts",
     "<rootDir>/src/templates/UserProfile/StyledUserProfile.tsx",
-    "<rootDir>/src/templates/UserProfile/index.tsx"
+    "<rootDir>/src/templates/UserProfile/index.tsx",
+    "<rootDir>/src/components/RadioGroup/index.tsx",
+    "<rootDir>/src/components/RadioGroup/StyledRadioGroup.tsx"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",

@@ -1,5 +1,5 @@
 import React, { Component, createRef, FormEvent } from "react";
-import { Dispatch, bindActionCreators } from "redux";
+import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
