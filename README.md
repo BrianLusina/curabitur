@@ -1,22 +1,27 @@
-# Curabitur
+# ChatSockets
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f43fe44e2b438b92a23a0fe560e49b)](https://www.codacy.com/app/BrianLusina/curabitur?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/curabitur&amp;utm_campaign=Badge_Grade)
-[![Build Status](https://travis-ci.org/BrianLusina/curabitur.svg?branch=master)](https://travis-ci.org/BrianLusina/curabitur)
-[![codecov](https://codecov.io/gh/BrianLusina/curabitur/branch/master/graph/badge.svg)](https://codecov.io/gh/BrianLusina/curabitur)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f43fe44e2b438b92a23a0fe560e49b)](https://www.codacy.com/manual/BrianLusina/chat-sockets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/chat-sockets&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/BrianLusina/chat-sockets.svg?branch=develop)](https://travis-ci.org/BrianLusina/chat-sockets)
+[![codecov](https://codecov.io/gh/BrianLusina/chat-sockets/branch/develop/graph/badge.svg)](https://codecov.io/gh/BrianLusina/chat-sockets)
 
-Translates to Latin for "Chat". This is a simple chat application with [Redux](https://redux.js.org/), [React](https://reactjs.org/) and [websockets](https://en.wikipedia.org/wiki/WebSocket). This is a simple demonstration onf the posibilities of using React for creating chat applications that communicate via websockets.
+This is a simple chat application with [Redux](https://redux.js.org/), [React](https://reactjs.org/) and [websockets](https://en.wikipedia.org/wiki/WebSocket). This is a simple demonstration of the posibilities of using React for creating chat applications that communicate via websockets.
 
 ## Getting Started
 
 Getting started is pretty simple, ensure you have [node](https://nodejs.org/en/), [npm](https://www.npmjs.com/)/[yarn](https://yarnpkg.com/en/) installed on your development environment. Installation instructions can be found in the links provided.
 
-```bash
-$ git clone https://github.com/BrianLusina/curabitur.git
-$ cd curabitur
+``` bash
+$ git clone https://github.com/BrianLusina/chat-sockets.git
+$ cd chat-sockets
+$ cd client
 $ yarn install
 # if using npm
 $ npm install
+$ cd ..
+$ cd server
+$ yarn install
 ```
+
 > This will get you a copy of the project and install dependencies you need from the package.json provided
 
 ## Running the application
@@ -24,6 +29,7 @@ $ npm install
 Running the application is as simple as:
 
 ```bash
+$ cd client
 $ yarn start
 # if using npm
 $ npm run start
@@ -39,6 +45,7 @@ Go a step further and tunnel the localhost address using something like [ngrok](
 Tests can be run with
 
 ```bash
+$ cd client
 $ yarn test
 # or
 $ npm run test
