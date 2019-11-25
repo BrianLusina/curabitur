@@ -3,13 +3,13 @@ import withTranslations from "Providers/translations/withTranslations";
 import withTheme from "Providers/theme/withTheme";
 import StyledPage from "../StyledPage";
 import ChatArea from "Components/chat/ChatArea";
-// import MessageSender from '../../MessageSender';
+import MessageSender from "Components/MessageSender";
 
 const ChatPage = () => (
     <StyledPage>
         <ChatArea />
+        <MessageSender />
     </StyledPage>
-//     <MessageSender/>
 );
 
 export default withTranslations(withTheme(ChatPage));

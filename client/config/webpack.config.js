@@ -282,7 +282,7 @@ module.exports = function(webpackEnv) {
         Services: path.resolve("src/services/"),
         Providers: path.resolve("src/providers/"),
         "@socket": path.resolve("src/services/socket/"),
-        TimeUtils: path.resolve("/src/utils/timeUtils.ts"),
+        TimeUtils: path.resolve("src/utils/timeUtils.ts"),
         DomUtils: path.resolve("src/utils/domUtils.ts"),
         Pages: path.resolve("src/pages/")
       },
