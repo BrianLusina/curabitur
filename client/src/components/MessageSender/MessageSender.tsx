@@ -1,4 +1,4 @@
-import React, { Component, createRef } from "react";
+import React, { Component, createRef, FormEvent } from "react";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -29,6 +29,7 @@ type State = {
 
 export class MessageSender extends Component<Props, State> {
     messageInputRef: React.RefObject<HTMLElement>;
+    pressedKeysMap: {} = {};
 
     constructor(props: Props) {
         super(props);
@@ -55,8 +56,55 @@ export class MessageSender extends Component<Props, State> {
         }
     };
 
+    clearMessageInput = () => {
+        this.setState({
+            chatmessage: ""
+        });
+
+        this.focusTextInput();
+    };
+
+    focusTextInput = () => {
+        if (this.messageInputRef.current) {
+            this.messageInputRef.current.focus();
+        }
+    };
+
+    handleClick = () => {
+        this.sendChatMessage();
+        this.clearMessageInput();
+    };
+
+    handleOnChange = (e: FormEvent<HTMLInputElement>) => {
+        this.setState({
+            chatmessage: e.currentTarget.value
+        });
+    };
+
     handleKeyPress = (e: KeyboardEvent) => {
 
+    };
+
+    sendOnPressCtrlEnter = () => {
+        const values = Object.values(this.pressedKeysMap);
+
+        if (values.indexOf(KEY_CODES.CTRL) !== -1 && values.indexOf(KEY_CODES.ENTER) !== -1) {
+            this.sendChatMessage();
+            this.clearMessageInput();
+        }
+    };
+
+    sendOnPressEnter = () => {
+        const values = Object.values(this.pressedKeysMap);
+
+        if (values.indexOf(KEY_CODES.ENTER) !== -1 && values.indexOf(KEY_CODES.CTRL) === -1) {
+            this.sendChatMessage();
+            this.clearMessageInput();
+        }
+    };
+
+    handleKeyUp = () => {
+        this.pressedKeysMap = {};
     };
 
     render() {

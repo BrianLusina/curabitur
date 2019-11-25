@@ -33,7 +33,8 @@ module.exports = {
     "<rootDir>/src/pages/StyledPage.tsx",
     "<rootDir>/src/components/chat/StyledChatArea.tsx",
     "<rootDir>/src/components/MessageSender/StyledMessagSender.tsx",
-    "<rootDir>/src/components/MessageSender/index.tsx"
+    "<rootDir>/src/components/MessageSender/index.tsx",
+    "<rootDir>/src/components/MessageSender/constants.ts"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",
