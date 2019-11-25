@@ -238,4 +238,73 @@ describe("MessageSender", () => {
         // @ts-ignore
         expect(wrapper.instance().pressedKeysMap).toEqual({});
     });
+
+    describe("should call handleKeyPress", () => {
+        let mock: jest.SpyInstance<string | null, [string]>;
+
+        beforeEach(() => {
+            mock = jest.spyOn(LocalStorage, "readRecord");
+        });
+
+        afterEach(() => {
+            mock.mockClear();
+        });
+
+        it("and call sendOnPressCtrlEnter when ctrlEnterSending is on", () => {
+            const instance = wrapper.instance();
+
+            mock.mockImplementationOnce(() => "On");
+
+            // @ts-ignore
+            const sendOnPressCtrlEnterSpy = jest.spyOn(instance, "sendOnPressCtrlEnter");
+
+            const keyboardEvent = {
+                type: "keydown",
+                key: "Enter"
+            };
+
+            // @ts-ignore
+            instance.handleKeyPress(keyboardEvent);
+
+            expect(sendOnPressCtrlEnterSpy).toHaveBeenCalledTimes(1);
+        });
+
+        it("and call sendOnPressEnter when ctrlEnterSending is off", () => {
+            const instance = wrapper.instance();
+
+            mock.mockImplementationOnce(() => "Off");
+
+            // @ts-ignore
+            const sendOnPressEnterSpy = jest.spyOn(instance, "sendOnPressEnter");
+
+            const keyboardEvent = {
+                type: "keydown",
+                key: "Enter"
+            };
+
+            // @ts-ignore
+            instance.handleKeyPress(keyboardEvent);
+
+            expect(sendOnPressEnterSpy).toHaveBeenCalledTimes(1);
+        });
+    });
+
+    it("should call sendChatMessage on click Send button", () => {
+        const instance = wrapper.instance();
+
+        // @ts-ignore
+        const spy = jest.spyOn(instance, "sendChatMessage");
+        wrapper.find("button").simulate("click");
+        expect(spy).toHaveBeenCalledTimes(1);
+      });
+
+    it("should clear send messages input on click Send button", () => {
+        const instance = wrapper.instance();
+        instance.setState({ chatmessage: "test" }, () => {
+            expect(wrapper.find("input").props().value).toBe("test");
+        });
+
+        wrapper.find("button").simulate("click");
+        expect(wrapper.find("input").props().value).toBe("");
+    });
 });

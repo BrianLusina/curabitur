@@ -82,7 +82,14 @@ export class MessageSender extends Component<Props, State> {
     };
 
     handleKeyPress = (e: KeyboardEvent) => {
+        // @ts-ignore
+        this.pressedKeysMap[e.key] = e.type === "keydown";
 
+        if (readRecord("ctrlEnterSending") === "On") {
+            this.sendOnPressCtrlEnter();
+        } else {
+            this.sendOnPressEnter();
+        }
     };
 
     sendOnPressCtrlEnter = () => {
@@ -108,9 +115,24 @@ export class MessageSender extends Component<Props, State> {
     };
 
     render() {
+        const { chatmessage } = this.state;
+
         return (
             <StyledMessageSender>
+                <input
+                    id="send-message-input"
+                    type="text"
+                    // @ts-ignore
+                    ref={this.messageInputRef}
+                    value={chatmessage}
+                    onChange={this.handleOnChange}
+                />
 
+                <button
+                    id="send-message-btn"
+                    onClick={this.handleClick}>
+                        <FontAwesomeIcon icon={faPaperPlane} color="white" size="2x"/>
+                </button>
             </StyledMessageSender>
         );
     }
