@@ -39,7 +39,7 @@ module.exports = {
     "<rootDir>/src/templates/UserProfile/index.tsx",
     "<rootDir>/src/components/RadioGroup/index.tsx",
     "<rootDir>/src/components/RadioGroup/StyledRadioGroup.tsx",
-    "<rootDir>/src/templates/ThemeSelector/StyledThemSelector.tsx",
+    "<rootDir>/src/templates/ThemeSelector/StyledThemeSelector.tsx",
     "<rootDir>/src/templates/ThemeSelector/index.tsx",
     "<rootDir>/src/store/socket/state.ts",
     "<rootDir>/src/store/message/state.ts",
@@ -58,7 +58,11 @@ module.exports = {
     "<rootDir>/src/templates/ClockModeSelector/index.tsx",
     "<rootDir>/src/templates/ClockModeSelector/StyledClockMode.tsx",
     "<rootDir>/src/templates/SendingOptions/index.tsx",
-    "<rootDir>/src/templates/SendingOptions/StyledSendingOptions.tsx"
+    "<rootDir>/src/templates/SendingOptions/StyledSendingOptions.tsx",
+    "<rootDir>/src/i18n/translations-mock.ts",
+    "<rootDir>/src/store/rootReducer.ts",
+    "<rootDir>/src/templates/LanguageSelector/index.tsx",
+    "<rootDir>/src/templates/LanguageSelector/StyledLanguageSelector.tsx",
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",

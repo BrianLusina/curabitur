@@ -8,6 +8,8 @@ import UserProfile from "Templates/UserProfile";
 import ThemeSelector from "Templates/ThemeSelector";
 import ClockModeSelector from "Templates/ClockModeSelector";
 import SendingOptions from "Templates/SendingOptions";
+import LanguageSelector from "Templates/LanguageSelector";
+
 
 type Props = {
     changeLanguage: () => void,
@@ -17,7 +19,7 @@ type Props = {
 };
 
 const SettingsPage = (props: Props) => {
-    const { translations, changeTheme } = props;
+    const { translations, changeTheme, changeLanguage } = props;
 
     return (
         <StyledPage>
@@ -25,6 +27,7 @@ const SettingsPage = (props: Props) => {
             <ThemeSelector translations={translations} changeTheme={changeTheme} />
             <ClockModeSelector translations={translations} />
             <SendingOptions translations={translations}/>
+            <LanguageSelector translations={translations} changeLanguage={changeLanguage}/>
         </StyledPage>
     );
 };
