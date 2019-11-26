@@ -6,6 +6,7 @@ import { ThemeContextType } from "Providers/theme/types";
 import { TranslationContextType } from "Providers/translations/types";
 import UserProfile from "Templates/UserProfile";
 import ThemeSelector from "Templates/ThemeSelector";
+import ClockModeSelector from "Templates/ClockModeSelector";
 
 type Props = {
     changeLanguage: () => void,
@@ -21,6 +22,7 @@ const SettingsPage = (props: Props) => {
         <StyledPage>
             <UserProfile translations={translations} />
             <ThemeSelector translations={translations} changeTheme={changeTheme} />
+            <ClockModeSelector translations={translations} />
         </StyledPage>
     );
 };
