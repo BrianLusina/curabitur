@@ -56,7 +56,9 @@ module.exports = {
     "<rootDir>/src/Root.tsx",
     "<rootDir>/src/App.tsx",
     "<rootDir>/src/templates/ClockModeSelector/index.tsx",
-    "<rootDir>/src/templates/ClockModeSelector/StyledClockMode.tsx"
+    "<rootDir>/src/templates/ClockModeSelector/StyledClockMode.tsx",
+    "<rootDir>/src/templates/SendingOptions/index.tsx",
+    "<rootDir>/src/templates/SendingOptions/StyledSendingOptions.tsx"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",

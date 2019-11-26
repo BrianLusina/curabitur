@@ -7,6 +7,7 @@ import { TranslationContextType } from "Providers/translations/types";
 import UserProfile from "Templates/UserProfile";
 import ThemeSelector from "Templates/ThemeSelector";
 import ClockModeSelector from "Templates/ClockModeSelector";
+import SendingOptions from "Templates/SendingOptions";
 
 type Props = {
     changeLanguage: () => void,
@@ -23,6 +24,7 @@ const SettingsPage = (props: Props) => {
             <UserProfile translations={translations} />
             <ThemeSelector translations={translations} changeTheme={changeTheme} />
             <ClockModeSelector translations={translations} />
+            <SendingOptions translations={translations}/>
         </StyledPage>
     );
 };
