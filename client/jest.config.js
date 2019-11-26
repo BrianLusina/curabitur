@@ -63,6 +63,7 @@ module.exports = {
     "<rootDir>/src/store/rootReducer.ts",
     "<rootDir>/src/templates/LanguageSelector/index.tsx",
     "<rootDir>/src/templates/LanguageSelector/StyledLanguageSelector.tsx",
+    "<rootDir>/src/components/button/StyledButton.tsx"
   ],
   setupFiles: [
     "<rootDir>/config/polyfills.js",

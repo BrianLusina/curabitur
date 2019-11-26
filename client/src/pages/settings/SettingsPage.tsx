@@ -9,6 +9,8 @@ import ThemeSelector from "Templates/ThemeSelector";
 import ClockModeSelector from "Templates/ClockModeSelector";
 import SendingOptions from "Templates/SendingOptions";
 import LanguageSelector from "Templates/LanguageSelector";
+import Button from "Components/button/Button";
+import { clearAll } from "Storage/localStorageService";
 
 
 type Props = {
@@ -28,6 +30,7 @@ const SettingsPage = (props: Props) => {
             <ClockModeSelector translations={translations} />
             <SendingOptions translations={translations}/>
             <LanguageSelector translations={translations} changeLanguage={changeLanguage}/>
+            <Button text={translations.resetButtonLabel} handleClick={clearAll} />
         </StyledPage>
     );
 };
