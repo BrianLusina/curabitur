@@ -12,7 +12,8 @@
       "Store/*": ["store/*"],
       "TimeUtils": ["utils/timeUtils.ts"],
       "DomUtils": ["utils/domUtils.ts"],
-      "Pages/*": ["pages/*"]
+      "Pages/*": ["pages/*"],
+      "Templates/*": ["templates/*"]
     },    
     "target": "es5",
     "lib": [
