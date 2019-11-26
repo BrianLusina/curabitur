@@ -2,16 +2,32 @@
   "name": "chat-server",
   "version": "1.0.0",
   "description": "server for chat sockets",
-  "main": "index.js",
+  "main": "app.js",
   "repository": "https://github.com/BrianLusina/chat-sockets.git",
   "author": "Brian Lusina",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.3.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2",
+    "winston": "^3.2.1"
   },
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "start": "ts-node app.ts",
+    "start:watch": "nodemon --watch './client/src/**/*.ts' --exec \"node\" app.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "@types/socket.io": "^2.1.4",
+    "@types/winston": "^2.4.4",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^2.0.1"
   }
 }

@@ -33,6 +33,9 @@ $ cd client
 $ yarn start
 # if using npm
 $ npm run start
+
+$ cd server
+$ yarn start
 ```
 
 This will run in development mode on address [http://localhost:3000](http://localhost:3000). Open Several browsers with the same address to act
