@@ -28,6 +28,6 @@
     "@types/winston": "^2.4.4",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.3"
   }
 }
