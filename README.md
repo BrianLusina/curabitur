@@ -3,6 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/93f43fe44e2b438b92a23a0fe560e49b)](https://www.codacy.com/manual/BrianLusina/chat-sockets?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=BrianLusina/chat-sockets&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.org/BrianLusina/chat-sockets.svg?branch=develop)](https://travis-ci.org/BrianLusina/chat-sockets)
 [![codecov](https://codecov.io/gh/BrianLusina/chat-sockets/branch/develop/graph/badge.svg)](https://codecov.io/gh/BrianLusina/chat-sockets)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBrianLusina%2Fchat-sockets.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBrianLusina%2Fchat-sockets?ref=badge_shield)
 
 This is a simple chat application with [Redux](https://redux.js.org/), [React](https://reactjs.org/) and [websockets](https://en.wikipedia.org/wiki/WebSocket). This is a simple demonstration of the posibilities of using React for creating chat applications that communicate via websockets.
 
@@ -59,3 +60,7 @@ $ npm run test
 [![forthebadge](http://forthebadge.com/images/badges/as-seen-on-tv.svg)](http://forthebadge.com)
 
 Enjoy!
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBrianLusina%2Fchat-sockets.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBrianLusina%2Fchat-sockets?ref=badge_large)
