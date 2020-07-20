@@ -24,7 +24,7 @@
     "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
-    "@types/express": "^4.17.2",
+    "@types/express": "^4.17.7",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.36",
     "@types/socket.io": "^2.1.4",
