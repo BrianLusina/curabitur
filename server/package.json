@@ -24,10 +24,10 @@
     "prepare": "yarn run snyk-protect"
   },
   "devDependencies": {
-    "@types/express": "^4.17.2",
-    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.50",
-    "@types/socket.io": "^2.1.4",
+    "@types/express": "^4.17.7",
+    "@types/jest": "^24.9.1",
+    "@types/socket.io": "^2.1.8",
     "@types/winston": "^2.4.4",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
