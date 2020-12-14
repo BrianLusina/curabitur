@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@types/node": "^12.12.54",
-    "@types/express": "^4.17.7",
+    "@types/express": "^4.17.9",
     "@types/jest": "^24.9.1",
     "@types/socket.io": "^2.1.10",
     "@types/winston": "^2.4.4",
