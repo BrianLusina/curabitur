@@ -13,7 +13,7 @@
     "ts-node": "^8.10.1",
     "typescript": "^3.9.7",
     "winston": "^3.3.3",
-    "snyk": "^1.437.3"
+    "snyk": "^1.439.0"
   },
   "scripts": {
     "test": "exit 0",
