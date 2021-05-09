@@ -10,7 +10,7 @@
     "@types/lodash": "^4.14.144",
     "get-urls": "^9.2.0",
     "linkifyjs": "^2.1.8",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-dev-utils": "^11.0.4",
